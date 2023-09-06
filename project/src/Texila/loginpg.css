@@ -1,0 +1,20 @@
+*{
+    background-color: plum;
+    text-align: left;
+    margin-left: 70px;
+    text-shadow: 30px;
+    text-size-adjust: 2px;
+    font-size: 22px;
+
+}
+h1{
+    font-size: 28px;
+}
+#Address{
+    width: 600px;
+    height: 150px;
+    background-color: aliceblue;
+}
+.btn{
+    background-color: orange;
+}

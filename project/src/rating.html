@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="rating.css">
+   
+</head>
+<body>
+    <div class="Container">
+        <h1>Rating Chart</h1>
+        <div class="input">
+            <input type="text" id="name" placeholder="Enter your Name">
+            <label for="name"></label> 
+            <br/>
+            <br/>
+         <div class="star">
+            <input type="radio" name="rate" id="rate-5">
+            <label for="rate-5" class="fa fa-star"></label>
+            <input type="radio" name="rate" id="rate-4">
+            <label for="rate-4" class="fa fa-star" ></label>
+            <input type="radio" name="rate" id="rate-3">
+            <label for="rate-3" class="fa fa-star"></label>
+            <input type="radio" name="rate" id="rate-2">
+            <label for="rate-2" class="fa fa-star"></label>
+            <input type="radio" name="rate" id="rate-1">
+            <label for="rate-1" class="fa fa-star"></label>
+            <br/>
+        <form action="#">
+            <header></header>
+            <input type="text" id="text" placeholder="Describe Your Experience">
+            <br/>
+            <button type="button" id="onSubmit">Submit</button>
+        </form>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Rating</th>
+                <th>Experience</th>
+            </tr>
+        </table>
+        </div>
+        <script>
+            var myArray = [];
+                document.getElementById('onSubmit').addEventListener('click', function () {
+                var name = document.getElementById("name").value;
+                var rating = document.querySelector('input[name="rate"]:checked').id.split('-')[1];
+                var experience = document.getElementById("text").value;
+                
+                myArray.push([name,rating,experience]);
+                updateTable();
+                })
+
+                function updateTable() {
+                var table = document.querySelector('table');
+                var newRow = table.insertRow();
+                for (var i = 0; i < 3; i++) {
+                    var cell = newRow.insertCell();
+                    cell.textContent = myArray[myArray.length - 1][i];
+                }
+            }
+            
+            </script>
+    </div>
+</body>
+</html>

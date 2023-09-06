@@ -1,0 +1,62 @@
+.Container{
+    width: 100%;
+    height: 100%;
+    background-color: aqua;
+
+}
+.input{
+    width: 50%;
+    height: 800px;
+    background-color: aquamarine;
+}
+#name{
+   margin-top: 50px;
+   width: 250px;
+   height: 30px;
+}
+#review{
+    width: 250px;
+    height: 150px;
+}
+/* #rate-1:checked~form header:before{
+    content: 'I dont Like it';
+} */
+.star{
+    font-size: 40px;
+}
+#text{
+    width: 200px;
+    height: 150px;
+}
+#rate-5:checked~form header::before{
+    content: "I really hate it ";
+}
+#rate-4:checked~form header::before{
+    content: "I dont like it ";
+}
+#rate-3:checked~form header::before{
+    content: "It is Awesome ";
+}
+#rate-2:checked~form header::before{
+    content: "It is very Good ";
+}
+#rate-1:checked~form header::before{
+    content: "I Love it ";
+}
+
+#onSubmit{
+    width: 80px;
+    height: 40px;
+    background-color: orange;
+}
+table {
+    font-family: arial, sans-serif;
+    /* border-collapse: collapse; */
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
